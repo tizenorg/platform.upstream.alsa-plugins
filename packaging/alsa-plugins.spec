@@ -1,7 +1,6 @@
 Name:           alsa-plugins
 BuildRequires:  pkgconfig(alsa)
-BuildRequires:  pkgconfig(dbus)
-#BuildRequires:  libsamplerate-devel
+BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  libtool
 BuildRequires:  libpulse-devel
 BuildRequires:  speex-devel
