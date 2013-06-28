@@ -14,6 +14,7 @@ Source:         ftp://ftp.alsa-project.org/pub/plugins/alsa-plugins-%{version}.t
 Source1:        asound-pulse.conf
 Source2:        alsa-pulse.conf
 Source3:        baselibs.conf
+Source1001: 	alsa-plugins.manifest
 
 %description
 This package contains the extra plug-ins for the ALSA library.
@@ -42,6 +43,7 @@ library using libspeexdsp.
 
 %prep
 %setup -q 
+cp %{SOURCE1001} .
 
 %build
 export AUTOMAKE_JOBS="%{?_smp_mflags}"
@@ -68,6 +70,7 @@ fi
 exit 0
 
 %files
+%manifest %{name}.manifest
 %defattr(-, root, root)
 %license COPYING
 %{_libdir}/alsa-lib/libasound_module_ctl_oss.so
@@ -79,6 +82,7 @@ exit 0
 %{_libdir}/alsa-lib/libasound_module_ctl_arcam_av.so
 
 %files pulse
+%manifest %{name}.manifest
 %defattr(-, root, root)
 %license COPYING
 %{_libdir}/alsa-lib/libasound_module_ctl_pulse.so
@@ -89,6 +93,7 @@ exit 0
 %{_datadir}/alsa/alsa.conf.d
 
 %files speex
+%manifest %{name}.manifest
 %defattr(-, root, root)
 %license COPYING
 %{_libdir}/alsa-lib/libasound_module_pcm_speex.so
