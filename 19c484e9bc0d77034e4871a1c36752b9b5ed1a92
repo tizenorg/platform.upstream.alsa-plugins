@@ -1,0 +1,8 @@
+Change-Id: I19c484e9bc0d77034e4871a1c36752b9b5ed1a92
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 10:06:15 -0700
+Reviewed-on: https://review.tizen.org/gerrit/4598
+Project: platform/upstream/alsa-plugins
+Branch: refs/heads/tizen
